@@ -1,6 +1,7 @@
 package com.in6k.tests.first;
 
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 import org.junit.Ignore;
@@ -13,13 +14,13 @@ public class IndependentPrincipleTest {
     @Test
     public void test2() throws Exception {
         result += 4;
-        assertEquals(4, result);
+        assertThat(result, is(4));
     }
 
     @Test
     @Ignore
     public void test1() throws Exception {
         result += 2;
-        assertEquals(2, result);
+        assertThat(result, is(2));
     }
 }
